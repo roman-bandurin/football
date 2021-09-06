@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# football
-football calendar
-=======
 # vue-football
 
 ## Project setup
@@ -26,4 +22,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> da2a669 (Initial commit)
