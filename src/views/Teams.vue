@@ -1,5 +1,18 @@
 <template>
   <v-sheet class="teams">
+    <competitions-filter
+      :value="competitionId"
+      :escape-route="{
+        name: 'CompetitionsFrom',
+      }"
+      @change="
+        $router.push({
+          name: 'TeamsFrom',
+          params: { competitionId: String($event) },
+        })
+      "
+    >
+    </competitions-filter>
     <v-data-table
       dense
       :headers="[
@@ -42,14 +55,21 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import CompetitionsFilter from "./Home/CompetitionsFilter.vue";
 import VEmblem from "./Home/VEmblem.vue";
 
 export default {
   name: "Teams",
   components: {
+    CompetitionsFilter,
     VEmblem,
   },
-  props: {},
+  props: {
+    competitionId: {
+      type: Number,
+      require: true,
+    },
+  },
   data: () => ({}),
   computed: {
     ...mapState("competitions", ["competitions"]),

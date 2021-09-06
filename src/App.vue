@@ -1,41 +1,36 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
+    <v-app-bar
+      class="mb-6"
+      app
+      color="#6A76AB"
+      dark
+      height="200"
+      :src="require('/src/assets/stadium.jpg')"
+      hide-on-scroll
+      prominent
+      scroll-threshold="0"
+    >
+      <template v-slot:img="{ props }">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+          v-bind="props"
+          gradient="to top right, rgba(85,139,47,.7), rgba(25,32,72,.7)"
+        ></v-img>
+      </template>
+      <v-app-bar-title class="ml-6">Футбол</v-app-bar-title>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <template v-slot:extension>
+        <v-tabs align-with-title>
+          <v-tab :to="{ name: 'Home' }">Главная</v-tab>
+          <v-tab :to="{ name: 'CompetitionsFrom' }">Соревнования</v-tab>
+          <v-tab :to="{ name: 'About' }">О нас</v-tab>
+        </v-tabs>
+      </template>
     </v-app-bar>
 
     <v-main>
       <v-container>
-      <router-view />
+        <router-view />
       </v-container>
     </v-main>
   </v-app>
@@ -44,9 +39,8 @@
 <script>
 export default {
   name: "App",
-
-  data: () => ({
-    //
-  }),
+  data() {
+    return {};
+  },
 };
 </script>

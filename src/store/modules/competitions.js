@@ -27,6 +27,7 @@ export default {
       // const competitions = await response.json();
       // defaultCompetitions;
       const { competitions = [], ...meta } = defaultCompetitions;
+
       const dict = Object.fromEntries(
         competitions.map((competition) => [competition.id, competition])
       );
