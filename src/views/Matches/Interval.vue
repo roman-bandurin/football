@@ -74,10 +74,10 @@ export default {
   },
   data() {
     return {
-menu: false,
-    dates: [undefined, undefined],
-    datesInclude: [],
-    }
+      menu: false,
+      dates: [undefined, undefined],
+      datesInclude: [],
+    };
   },
   computed: {
     dateRangeText: {

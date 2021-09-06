@@ -86,7 +86,7 @@ export default {
     TeamsFilter,
     Calendar,
     Interval,
-    MonthPanel
+    MonthPanel,
   },
   props: {
     competitionId: {
@@ -108,8 +108,8 @@ export default {
   },
   data() {
     return {
-      date: new Date()
-    }
+      date: new Date(),
+    };
   },
   computed: {
     ...mapState("teams", ["teams"]),
@@ -144,7 +144,6 @@ export default {
         ? lightFormat(date, isMonth ? "yyyy-MM" : "yyyy-MM-dd")
         : "";
     },
-    
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => vm.beforeMatchesCreateAndUpdate());

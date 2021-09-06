@@ -84,7 +84,7 @@ export default {
     },
   },
   data() {
-    return {}
+    return {};
   },
   computed: {
     ...mapState("teams", ["teams"]),

@@ -6,6 +6,7 @@ import Vuetify from "vuetify/lib/framework";
 import stores from "./store/index";
 import routes from "./router/index";
 import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
@@ -15,18 +16,21 @@ Vue.use(Vuetify);
 new Vue({
   store: new Vuex.Store(stores),
   router: new VueRouter({ routes }),
+
   vuetify: new Vuetify({
     theme: {
       themes: {
         light: {
-          primary: '#558B2F', // light-green darken-3
-          secondary: '#689F38', // light-green darken-2
-          accent: '#7CB342', // light-green darken-1
-          error: '#E64A19', //deep-orange darken-2
+          primary: "#558B2F", // light-green darken-3
+          secondary: "#689F38", // light-green darken-2
+          accent: "#7CB342", // light-green darken-1
+          error: "#E64A19", //deep-orange darken-2
         },
       },
     },
   }),
+
+  vuetify,
   render: (h) => h(App),
 }).$mount("#app");
 

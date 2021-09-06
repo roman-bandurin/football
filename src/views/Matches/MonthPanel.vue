@@ -27,7 +27,7 @@ export default {
     dateTo: Date,
   },
   data() {
-    return {}
+    return {};
   },
   methods: {
     parseY(date, isMonth = false) {
