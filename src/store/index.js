@@ -1,11 +1,15 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import competitions from "./modules/competitions.js";
+import teams from "./modules/teams.js";
+import matches from "./modules/matches.js";
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default {
+  modules: {
+    competitions,
+    teams,
+    matches,
+  },
   state: {},
+  getters: {},
   mutations: {},
   actions: {},
-  modules: {},
-});
+};

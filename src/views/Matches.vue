@@ -19,7 +19,6 @@
 
     <v-sheet class="mb-5">
       <teams-filter
-        :competitionId="competitionId"
         :value="teamId"
         :escape-route="{
           name: 'TeamsFrom',
