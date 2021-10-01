@@ -39,6 +39,8 @@
     ]
   },
   "vue": {
+    "outputDir": "docs",
+    "publicPath": "/vue-football/",
     "transpileDependencies": ["vuetify"]
   },
   "eslintConfig": {
