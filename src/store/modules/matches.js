@@ -46,15 +46,6 @@ export default {
       { commit },
       { competitionId, teamId, dateFrom, dateTo }
     ) {
-      // 2013,2016,2021,2001,2018,2015,2002,2019,2003,2017,2152,2014,2000
-      // const response = await fetch('https://api.football-data.org/v2/competitions/2013/matches', {
-      //   headers: {
-      //     'X-Auth-Token': '81a4c956811346659e76e611ee3f55b2'
-      //   },
-      // });
-      // const competitionMatches = { 2013: { all: await response.json()} };
-      // defaultMatches;
-
       let { [competitionId]: { all: { matches = [], ...meta } = {} } = {} } =
         defaultMatches;
 

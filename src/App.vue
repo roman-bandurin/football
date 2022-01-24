@@ -21,9 +21,7 @@
       <v-spacer></v-spacer>
       <template v-slot:extension>
         <v-tabs align-with-title>
-          <v-tab :to="{ name: 'Home' }">Главная</v-tab>
           <v-tab :to="{ name: 'CompetitionsFrom' }">Соревнования</v-tab>
-          <v-tab :to="{ name: 'About' }">О нас</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>

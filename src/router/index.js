@@ -8,17 +8,14 @@ export default [
     name: "Home",
     path: "/",
     props: true,
-    component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+    redirect: () => {
+      return {
+        name: "CompetitionsTo",
+      };
+    },
   },
   ...competitions,
   ...matches,
   ...teams,
   ...teammatches,
-  {
-    name: "About",
-    path: "/about",
-    props: true,
-    component: () =>
-      import(/* webpackChunkName: "home" */ "../views/About.vue"),
-  },
 ];
